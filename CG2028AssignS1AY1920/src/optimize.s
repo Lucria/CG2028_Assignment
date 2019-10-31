@@ -19,11 +19,8 @@ GOTO_START_OF_LOOP:
     MLA R4, R3, R2, R1 @ Update R4 (fp value) with (R3(2a) x R2(Xi) ) + R1(b)
 
     SDIV R4, R6 @ Divide R4 with R6 and reuse R4 for storage (change = lambda * fp) because lambda is < 1
-    MOV R5, #1
-    SUB R5, #2
-    MUL R4, R5 @ Multiply R4 with -1 so that change = - lambda * fp
 
-    ADD R3, R2, R4 @Reuse R3, Add R2 (x) and R4 (change) and store in R3
+    SUB R3, R2, R4 @Rd, Rn, Op2    0000_00_0_0100_0_0010_0011_0000000_0_0100
 
     CMP R3, R2 @Check if xprev (R2) and x (R3) are the same
 	BEQ STR_ANS_TIME @Checks if (Z == 1 zero flag is on), then exit loop and go to register containing instruction to store out final value.
