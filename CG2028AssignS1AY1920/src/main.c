@@ -8,11 +8,13 @@
 //     xi : integer version of x
 //     a, b, c : integer coefficients of f(x)
 // Output : returns solution x (signed integer)
-extern int optimize(int a, int b, int xi);
+extern int optimize(int a, int b, int xi, int *ptr);
 
 int main(void)
 {
     int a=3, b=4, c=-3, xsoli;
+    int iterations = 0;
+
     float fp, x, xprev, xsol, change, lambda=0.1;
 
     printf("Initial value of x (press [Enter] after keying in): "); // try x0 = -6.78
@@ -21,11 +23,11 @@ int main(void)
 //  ARM ASM & Integer version
     printf("ARM ASM & Integer version:\n");
     int scaledA = a;
-    int scaledB = b * 100000;
-    int scaledX = x * 100000;
-    xsoli = optimize(scaledA,scaledB,(int)scaledX);
-    xsol = (float)xsoli / 100000;
-    printf("xsol : %f \n\n",xsol);
+    int scaledB = b * 10000;
+    int scaledX = x * 10000;
+    xsoli = optimize(scaledA,scaledB,(int)scaledX, &iterations);
+    xsol = (float)xsoli / 10000;
+    printf("xsol : %f , Iterations %d \n\n",xsol, iterations);
 
 //  NOTE: You DO NOT need to modify the code below this line
 

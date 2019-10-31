@@ -439,7 +439,7 @@ END GROUP
                 0x10008000                __top_RamLoc32 = 0x10008000
                 0x20084000                __top_RamAHB32 = 0x20084000
 
-.text           0x00000000     0x4248
+.text           0x00000000     0x4258
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -448,10 +448,10 @@ END GROUP
                 0x000000cc                . = ALIGN (0x4)
                 0x000000cc                __section_table_start = .
                 0x000000cc                __data_section_table = .
-                0x000000cc        0x4 LONG 0x4248 LOADADDR (.data)
+                0x000000cc        0x4 LONG 0x4258 LOADADDR (.data)
                 0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000d4        0x4 LONG 0x8 SIZEOF (.data)
-                0x000000d8        0x4 LONG 0x4248 LOADADDR (.data_RAM2)
+                0x000000d8        0x4 LONG 0x4258 LOADADDR (.data_RAM2)
                 0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x000000e4                __data_section_table_end = .
@@ -532,10 +532,10 @@ END GROUP
                 0x000001a4                UART3_IRQHandler
                 0x000001a4                MCPWM_IRQHandler
                 0x000001a4                ENET_IRQHandler
- .text.main     0x000001ac      0x190 ./src/main.o
+ .text.main     0x000001ac      0x198 ./src/main.o
                 0x000001ac                main
- .text          0x0000033c       0x34 ./src/optimize.o
-                0x0000033c                optimize
+ .text          0x00000344       0x2c ./src/optimize.o
+                0x00000344                optimize
  .text.SystemInit
                 0x00000370      0x22c D:\University Study\Modules Y2S1\CG2028\Labs & Assignment\CG2028Workspace\Lib_CMSISv1p30_LPC17xx\Debug\libCMSISv1p30_LPC17xx.a(system_LPC17xx.o)
                 0x00000370                SystemInit
@@ -730,48 +730,48 @@ END GROUP
                 0x00003f6c       0x2c c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_semihost.a(_cr_check_heap.o)
                 0x00003f6c                __check_heap_overflow
  *(.rodata .rodata.* .constdata .constdata.*)
- .rodata        0x00003f98       0xa4 ./src/main.o
+ .rodata        0x00003f98       0xb4 ./src/main.o
  .rodata.str1.1
-                0x0000403c       0x34 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
+                0x0000404c       0x34 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(fpprintf.o)
                                  0x35 (size before relaxing)
  .rodata.str1.1
-                0x00004070        0x4 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(initio.o)
+                0x00004080        0x4 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(initio.o)
  .rodata.str1.1
-                0x00004074       0x31 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(printf.o)
+                0x00004084       0x31 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(printf.o)
                                  0x38 (size before relaxing)
- *fill*         0x000040a5        0x3 00
+ *fill*         0x000040b5        0x3 00
  .rodata.__huge_vall
-                0x000040a8        0x8 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(_hugeval.o)
-                0x000040a8                __huge_vall
+                0x000040b8        0x8 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(_hugeval.o)
+                0x000040b8                __huge_vall
  .rodata.str1.1
-                0x000040b0       0x18 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(alloc.o)
+                0x000040c0       0x18 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(alloc.o)
  .rodata.__ctype
-                0x000040c8      0x180 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(ctype.o)
-                0x000040c8                __ctype
-                0x00004248                . = ALIGN (0x4)
+                0x000040d8      0x180 c:/nxp/lpcxpresso_6.1.4_194/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/lib/armv7-m\libcr_c.a(ctype.o)
+                0x000040d8                __ctype
+                0x00004258                . = ALIGN (0x4)
 
-.glue_7         0x00004248        0x0
+.glue_7         0x00004258        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00004248        0x0
+.glue_7t        0x00004258        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00004248        0x0
+.vfp11_veneer   0x00004258        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00004248        0x0
+.v4_bx          0x00004258        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00004248                __exidx_start = .
+                0x00004258                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00004248                __exidx_end = .
-                0x00004248                _etext = .
+                0x00004258                __exidx_end = .
+                0x00004258                _etext = .
 
-.data_RAM2      0x2007c000        0x0 load address 0x00004248
+.data_RAM2      0x2007c000        0x0 load address 0x00004258
  FILL mask 0xff
  *(.data.$RAM2*)
  *(.data.$RamAHB32*)
@@ -783,7 +783,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x8 load address 0x00004248
+.data           0x10000000        0x8 load address 0x00004258
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -832,11 +832,11 @@ END GROUP
                 0x10008000                PROVIDE (_vStackTop, (__top_RamLoc32 - 0x0))
 OUTPUT(CG2028AssignS1AY1920.axf elf32-littlearm)
 
-.debug_info     0x00000000      0x74b
+.debug_info     0x00000000      0x75a
  .debug_info    0x00000000      0x210 ./src/cr_startup_lpc17.o
- .debug_info    0x00000210      0x145 ./src/main.o
- .debug_info    0x00000355       0x9f ./src/optimize.o
- .debug_info    0x000003f4      0x357 D:\University Study\Modules Y2S1\CG2028\Labs & Assignment\CG2028Workspace\Lib_CMSISv1p30_LPC17xx\Debug\libCMSISv1p30_LPC17xx.a(system_LPC17xx.o)
+ .debug_info    0x00000210      0x154 ./src/main.o
+ .debug_info    0x00000364       0x9f ./src/optimize.o
+ .debug_info    0x00000403      0x357 D:\University Study\Modules Y2S1\CG2028\Labs & Assignment\CG2028Workspace\Lib_CMSISv1p30_LPC17xx\Debug\libCMSISv1p30_LPC17xx.a(system_LPC17xx.o)
 
 .debug_abbrev   0x00000000      0x202
  .debug_abbrev  0x00000000       0xb4 ./src/cr_startup_lpc17.o
@@ -866,8 +866,8 @@ OUTPUT(CG2028AssignS1AY1920.axf elf32-littlearm)
 
 .debug_line     0x00000000      0xba4
  .debug_line    0x00000000      0x473 ./src/cr_startup_lpc17.o
- .debug_line    0x00000473      0x2bd ./src/main.o
- .debug_line    0x00000730       0x50 ./src/optimize.o
+ .debug_line    0x00000473      0x2be ./src/main.o
+ .debug_line    0x00000731       0x4f ./src/optimize.o
  .debug_line    0x00000780      0x424 D:\University Study\Modules Y2S1\CG2028\Labs & Assignment\CG2028Workspace\Lib_CMSISv1p30_LPC17xx\Debug\libCMSISv1p30_LPC17xx.a(system_LPC17xx.o)
 
 .debug_macinfo  0x00000000     0xec72
@@ -878,12 +878,12 @@ OUTPUT(CG2028AssignS1AY1920.axf elf32-littlearm)
  .debug_macinfo
                 0x0000687a     0x83f8 D:\University Study\Modules Y2S1\CG2028\Labs & Assignment\CG2028Workspace\Lib_CMSISv1p30_LPC17xx\Debug\libCMSISv1p30_LPC17xx.a(system_LPC17xx.o)
 
-.debug_str      0x00000000      0x449
+.debug_str      0x00000000      0x454
  .debug_str     0x00000000      0x1fd ./src/cr_startup_lpc17.o
                                 0x231 (size before relaxing)
- .debug_str     0x000001fd       0x55 ./src/main.o
-                                0x140 (size before relaxing)
- .debug_str     0x00000252      0x1f7 D:\University Study\Modules Y2S1\CG2028\Labs & Assignment\CG2028Workspace\Lib_CMSISv1p30_LPC17xx\Debug\libCMSISv1p30_LPC17xx.a(system_LPC17xx.o)
+ .debug_str     0x000001fd       0x60 ./src/main.o
+                                0x14b (size before relaxing)
+ .debug_str     0x0000025d      0x1f7 D:\University Study\Modules Y2S1\CG2028\Labs & Assignment\CG2028Workspace\Lib_CMSISv1p30_LPC17xx\Debug\libCMSISv1p30_LPC17xx.a(system_LPC17xx.o)
                                 0x2b9 (size before relaxing)
 
 .comment        0x00000000       0xe0
